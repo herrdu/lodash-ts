@@ -1,6 +1,6 @@
-import { MapCache } from './MapCache';
+import {MapCache} from './MapCache';
 
-import { HASH_UNDEFINED } from './Hash';
+import {HASH_UNDEFINED} from './Hash';
 
 export class SetCache {
   __data__: MapCache;
@@ -12,9 +12,9 @@ export class SetCache {
    * @constructor
    * @param {Array} [values] The values to cache.
    */
-  constructor(values: Array<any>) {
+  constructor(values?: Array<any>) {
     let index = -1;
-    const length = values === null ? 0 : values.length;
+    const length = values === null || values === undefined ? 0 : values.length;
 
     this.__data__ = new MapCache();
 

@@ -1,8 +1,16 @@
 import {difference} from '../src/difference';
 import {add} from '../src/add';
+import {after} from '../src/after';
 
 test('add', () => {
   expect(add(1, 2)).toEqual(3);
+});
+
+test('after', () => {
+  var saves = ['profile', 'settings'];
+  const done = after(saves.length, () => {
+    console.log('done saving!');
+  });
 });
 
 test('difference', () => {

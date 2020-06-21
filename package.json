@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint ./src/**/*.ts"
   },
   "devDependencies": {
     "@babel/core": "^7.10.3",

@@ -1,0 +1,12 @@
+import {eq} from '../src/eq';
+
+test('eq', () => {
+  const object = {a: 1};
+  const other = {a: 1};
+
+  expect(eq(object, object)).toEqual(true);
+  expect(eq(object, other)).toEqual(false);
+  expect(eq('a', 'a')).toEqual(true);
+  expect(eq('a', Object('a'))).toEqual(false);
+  expect(eq(NaN, NaN)).toEqual(true);
+});
